@@ -54,7 +54,11 @@ Users can sign in with Google, view video details, edit metadata, add personal n
 5. All actions are logged for tracking  
 
 ---
+### How to run locally
 
+- npm install
+- npm run dev
+---  
 ## 📸 Screenshots
 
 <img width="1054" height="1026" alt="image" src="https://github.com/user-attachments/assets/7a9626ba-4d4c-4962-986a-6a0b96d61549" />
