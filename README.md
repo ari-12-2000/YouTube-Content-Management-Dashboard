@@ -1,51 +1,70 @@
-ROUTES
+Production-style dashboard for managing YouTube content with authentication, editing tools, and activity tracking.
 
-1. POST /api/youtube
+Users can sign in with Google, view video details, edit metadata, add personal notes, and track all actions in a centralized interface.
 
-Handles YouTube operations like fetching video info, updating metadata, and managing comments.
+🔗 Live Demo: https://you-tube-react-dashboard.vercel.app/
 
-2. GET /api/youtube/[videoId]
+✨ Key Features
 
-Fetches full YouTube video details directly using the dynamic video ID.
+🔐 Google OAuth authentication
 
-3. GET /api/notes
+🎥 Fetch YouTube video details dynamically
 
-Returns notes for a specific video, with built-in text and tag search.
+✏️ Edit video title & description
 
-4. POST /api/notes
+📝 Add personal notes for each video
 
-Creates a new note with title, body, and tags for a selected video.
+📊 Display engagement stats (likes, comments, views)
 
-5. POST /api/logs
+🧾 Action logging system for auditing user activity
 
-Stores user actions such as edits, comments, and note activity for auditing.
+🔎 Search notes by text and tags
 
-PRISMA MODELS 
+📱 Responsive UI for desktop and mobile
 
-1.Note 
+🛠️ Tech Stack
 
-Stores user-created notes linked to a specific video, along with tags and timestamps.
+Frontend
 
-model Note {
-id String @id @default(cuid())
-videoId String
-title String
-body String
-tags String[] @default([])
-createdAt DateTime @default(now())
-updatedAt DateTime @updatedAt
-}
+Next.js
 
-2.Logs 
+React
 
-Keeps a history of important user actions such as comments, edits, or notes for auditing and tracking.
+TypeScript
 
-model Logs {
-  id           String @id @default(cuid())
-  action     String                      // what happened (VIEW_VIDEO, ADD_COMMENT, DELETE_COMMENT, etc.)
-  resourceId String                     // e.g., videoId, commentId, noteId
-  createdAt  DateTime @default(now())    // timestamp
-}
+Tailwind CSS
+
+Backend
+
+Node.js
+
+Next.js API Routes
+
+Database
+
+Prisma ORM
+
+PostgreSQL
+
+Authentication
+
+Google OAuth
+
+External APIs
+
+YouTube Data API
+
+🧠 How It Works
+
+User signs in via Google OAuth
+
+Enters a YouTube video URL
+
+Dashboard fetches video data via YouTube API
+
+User can edit metadata and add notes
+
+All actions are logged for tracking
 
 <img width="1054" height="1026" alt="image" src="https://github.com/user-attachments/assets/7a9626ba-4d4c-4962-986a-6a0b96d61549" />
 
