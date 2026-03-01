@@ -46,3 +46,11 @@ model Logs {
   resourceId String                     // e.g., videoId, commentId, noteId
   createdAt  DateTime @default(now())    // timestamp
 }
+
+<img width="734" height="589" alt="image" src="https://github.com/user-attachments/assets/627faf18-c943-4f89-92a0-456ab8574ea7" />
+
+<img width="738" height="700" alt="image" src="https://github.com/user-attachments/assets/b42ce36f-b826-4e79-ac53-75cc45a680eb" />
+
+<img width="1077" height="1034" alt="image" src="https://github.com/user-attachments/assets/ee205b4b-beee-496f-b46d-ca02e87d3a52" />
+
+
